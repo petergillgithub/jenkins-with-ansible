@@ -24,13 +24,13 @@
         src: /usr/local/apache-tomcat-9.0.78.tar.gz
         dest: /usr/local
         remote_src: yes
-    #- name: Change file ownership, group and permissions
-      #file:
-        #path: /usr/local/apache-tomcat-9.0.78.tar.gz
-        #owner: tomcat
-        #group: tomcat
-        #recurse: yes
-        #state: directory
+    - name: Change file ownership, group and permissions
+      file:
+        path: /usr/local/apache-tomcat-9.0.78.tar.gz
+        owner: tomcat
+        group: tomcat
+        recurse: yes
+        state: directory
     - name: make tomcat symbolic link
       file:
         src: /usr/local/apache-tomcat-9.0.78.tar.gz
