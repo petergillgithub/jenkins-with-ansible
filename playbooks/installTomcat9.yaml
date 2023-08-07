@@ -1,7 +1,7 @@
 ---
 - hosts: tomcatservers
   become: true
-  gathering_facts: no
+  gather_facts: no
   tasks:
     - name: Install Java
       yum:
