@@ -64,7 +64,7 @@
     - name: chmod 755 tomcat.service
       file:
         path: /etc/systemd/system/tomcat.service
-        mode:  0755
+        mode:  755
     - name: start tomcat
       systemd:
         name: tomcat.service
